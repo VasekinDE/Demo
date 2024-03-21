@@ -1,17 +1,22 @@
 #include <iostream>
 #include <stdlib.h>
 using namespace std;
-
-double getValue();
 /**
  * @brief считывает значение из потокового ввода
  * @return введенное значение
 */
-double massConverter(const double m);
+double getValue();
+
 /**
  * @brief переводит массу из грамм в унции
  * @param m - масса в граммах
  * @return масса в унциях
+*/
+double massConverter(const double m);
+
+/**
+ * @brief точка входа в программу
+ * @return возвращает 0, если программа выполнена успешно
 */
 int main()
 {
@@ -35,5 +40,6 @@ double getValue()
 
 double massConverter(const double m)
 {
-    return m * 28.3;
+    const double coef = 28.3;
+    return m * coef;
 }
